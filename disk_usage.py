@@ -44,7 +44,7 @@ def bytes2human(n):
             return '%.1f%s' % (value, s)
     return "%sB" % n
 
-def get_disk_value(*args):
+def get_disk_usage_values(*args):
     templ = "%-17s %8s %8s %8s %5s%% %9s  %s"
     print(templ % ("Device", "Total", "Used", "Free", "Use ", "Type",
                    "Mount"))
@@ -73,7 +73,7 @@ def get_disk_value(*args):
             sparkpart + "      " + sparktot + "   " +  sparkused + " " +  sparkfree + "     " +  str(sparkpct) + "        " +  sparktype + "     " +  sparkmtpt)
 
 def main():
-        get_disk_value()
+        get_disk_usage_values()
 
 if __name__ == "__main__":
     import sys
