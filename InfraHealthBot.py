@@ -4,12 +4,8 @@ import json
 import shlex
 import os
 from subprocess import *
-import helloWorld
 from disk_usage import sparkpart, sparktot, sparkused, bytes2human, get_disk_value, main
-from meminfo import pprint_ntuple, get_mem_info
 import psutil
-
-#sparktot = 0
 
 def sendSparkGET(url):
     """
@@ -41,10 +37,7 @@ def index(request):
     """
     When messages come in from the webhook, they are processed here.  The message text needs to be retrieved from Spark,
     using the sendSparkGet() function.  The message text is parsed.  If an expected command is found in the message,
-    further actions are taken. i.e.
-    /batman    - replies to the room with text
-    /batcave   - echoes the incoming text to the room
-    /batsignal - replies to the room with an image
+    further actions are taken. 
     """
     webhook = json.loads(request.body)
     print webhook['data']['id']
