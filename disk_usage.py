@@ -49,9 +49,6 @@ def get_disk_value(*args):
     for part in psutil.disk_partitions(all=False):
         if os.name == 'nt':
             if 'cdrom' in part.opts or part.fstype == '':
-                # skip cd-rom drives with no disk in it; they may raise
-                # ENOENT, pop-up a Windows GUI error for a non-ready
-                # partition or just hang.
                 continue    
         usage = psutil.disk_usage(part.mountpoint)
         print(templ % (
@@ -62,8 +59,7 @@ def get_disk_value(*args):
             int(usage.percent),
             part.fstype,
             part.mountpoint))
-        header01 = (templ % ("Device", "Total", "Used", "Free", "Use ", "Type",
-                   "Mount"))
+        header01 = (templ % ("Device", "Total", "Used", "Free", "Use ", "Type","Mount"))
         sparkpart = part.device
         sparktot = bytes2human(usage.total)
         sparkused = bytes2human(usage.used)
