@@ -60,5 +60,4 @@ def index(request):
 bot_email = "infrahealthbot@sparkbot.io"
 bot_name = "infrahealthbot"
 bearer = "ZWFmZjJmNTItM2FlNS00NWVkLTg5ZTEtNjVhNWYwYzlhN2JlMGExYjBhNDUtZTFh"
-bat_signal  = "https://upload.wikimedia.org/wikipedia/en/c/c6/Bat-signal_1989_film.jpg"
 run_itty(server='wsgiref', host='0.0.0.0', port=10010)
