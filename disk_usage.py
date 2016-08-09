@@ -4,6 +4,8 @@
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
+# Refactored this code for building InfraHealth Bot - yogyadav137
+
 """
 List all mounted disk partitions a-la "df -h" command.
 $ python scripts/disk_usage.py
