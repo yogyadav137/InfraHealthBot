@@ -4,7 +4,7 @@ import json
 import shlex
 import os
 from subprocess import *
-from disk_usage import sparkpart, sparktot, sparkused, bytes2human, get_disk_value, main
+from disk_usage import sparkpart, sparktot, sparkused, bytes2human, get_disk_usage_values, main
 import psutil
 
 def sendSparkGET(url):
@@ -48,7 +48,7 @@ def index(request):
         in_message = result.get('text', '').lower()
         in_message = in_message.replace(bot_name, '')
         if 'disk_usage' in in_message:
-                res = (get_disk_value())
+                res = (get_disk_usage_values())
                 print(res)
                 msg = format(res)
         if msg != None:
