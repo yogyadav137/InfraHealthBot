@@ -1,4 +1,8 @@
 
+# Copyright (c) 2016, Yogesh Yadav. All rights reserved.
+# Use of InfraHealthBot and dependent files source code is governed by a MIT-style license that can be
+# found in the LICENSE file
+
 # Refactored this code for building InfraHealth Bot - yogyadav137
 
 from itty import *
