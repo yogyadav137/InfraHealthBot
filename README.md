@@ -2,16 +2,21 @@
 
 a sample bot that demonstrates the framework to build a bot using Cisco Spark webhooks to fetch disk usage information. 
 
-check [InfraHealthBot.py](https://github.com/ObjectIsAdvantag/InfraHealthBot/blob/master/InfraHealthBot.py)
-1. sendSparkGET: retrieves message text when the webhook is triggered with a message.
-2. sendSparkPOST: posts a message to the spark room to confirm that a command was received and processed.
-3. Spark Bot identification details and bearer token is captured in the code.
-4. The example Webhook allows to POST/GET message to and from the spark room in which the bot is mentioned to the server using HTTP requests with a JSON payload. 
+
+# How it works
+
+Please check [InfraHealthBot.py](https://github.com/ObjectIsAdvantag/InfraHealthBot/blob/master/InfraHealthBot.py):
+
+* sendSparkGET: retrieves message text when the webhook is triggered with a message.
+* sendSparkPOST: posts a message to the spark room to confirm that a command was received and processed.
+* Spark Bot identification details and bearer token is captured in the code.
 
 
 # How to run
 
-Detailed instructions can be found in this DZone article: [Building Bots using Webhooks](https://dzone.com/articles/building-bots-using-webhooks).
+This Webhook allows to POST/GET message to and from the spark room in which the bot is mentioned to the server using HTTP requests with a JSON payload. 
+
+Detailed instructions to run it can be found in this DZone article: [Building Bots using Webhooks](https://dzone.com/articles/building-bots-using-webhooks).
 
 
 # Roadmap
